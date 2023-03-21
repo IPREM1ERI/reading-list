@@ -39,11 +39,11 @@ function Provider({ children }) {
   };
 
   const deleteBook = async (id) => {
-    await axios.delete(`http://locahost:3001/books/${id}`);
+    await axios.delete(`http://localhost:3001/books/${id}`);
     
     const updatedBooks = books.filter((book) => {
       return book.id !== id;
-    })
+    });
     setBooks(updatedBooks);
   };
 
