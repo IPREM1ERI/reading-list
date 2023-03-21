@@ -4,7 +4,7 @@ import BooksContext from "../context/books"
 
 
 function BookList({ books, onDelete, onEdit }) {
-  const { count, increamentCount } = useContext(BooksContext)
+  
   const renderedBooks = books.map((book) => {
     return <BookShow 
       key={book.id} 
@@ -15,8 +15,6 @@ function BookList({ books, onDelete, onEdit }) {
   })
   return (
     <div className="book-list">
-      {count}
-      <button onClick={increamentCount}>Click</button>
       {renderedBooks}
     </div>
   )
